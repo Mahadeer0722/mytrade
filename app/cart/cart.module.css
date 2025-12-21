@@ -1,0 +1,114 @@
+.pageTitle {
+    margin-top: var(--spacing-lg);
+    text-align: center;
+}
+
+.empty {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.cartContent {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+}
+
+@media (min-width: 768px) {
+    .cartContent {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+.items {
+    flex: 2;
+    background: var(--color-card-bg);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md);
+}
+
+.item {
+    display: flex;
+    gap: var(--spacing-md);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    align-items: center;
+    flex-wrap: wrap;
+    /* Allow wrapping on small screens */
+}
+
+.item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.itemDetails {
+    flex: 1;
+}
+
+.itemDetails h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.itemActions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    background: #000;
+    border-radius: 4px;
+}
+
+.quantity button {
+    background: transparent;
+    border: none;
+    color: var(--color-gold);
+    padding: 5px 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.quantity span {
+    padding: 0 5px;
+    color: #fff;
+}
+
+.removeBtn {
+    background: transparent;
+    border: none;
+    color: #ff4444;
+    font-size: 0.8rem;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.summary {
+    flex: 1;
+    background: var(--color-card-bg);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-gold);
+}
+
+.summaryRow {
+    display: flex;
+    justify-content: space-between;
+    margin: var(--spacing-md) 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.totalPrice {
+    color: var(--color-gold);
+}
