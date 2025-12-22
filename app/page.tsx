@@ -2,7 +2,7 @@ import { products } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
 import Navbar from '@/components/Navbar';
 import styles from './page.module.css';
-
+// updated 
 export default function Home() {
   return (
     <main>
