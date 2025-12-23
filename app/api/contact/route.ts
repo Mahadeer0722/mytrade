@@ -26,7 +26,7 @@ export async function POST(request: Request) {
 
     const mailOptions = {
         from: emailUser,
-        to: emailUser, // Send to self
+        to: 'gtcgarndtradingcompany@gmail.com', // Send to owner
         subject: `New Order: ${subject}`,
         text: `
       Name: ${firstName} ${lastName}
