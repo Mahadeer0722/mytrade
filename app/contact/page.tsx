@@ -24,7 +24,7 @@ export default function ContactPage() {
 
                     <div className={styles.infoGroup}>
                         <label>Email:</label>
-                        <p>agrandhaja@gmail.com</p>
+                        <p>gtcgarndtradingcompany@gmail.com</p>
                     </div>
 
                     <div className={styles.infoGroup}>

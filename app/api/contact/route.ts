@@ -8,7 +8,7 @@ export async function POST(request: Request) {
     const { firstName, lastName, phone, subject, message } = data;
 
     // Debug logging (Masked password)
-    const emailUser = process.env.EMAIL_USER || 'agrandhaja@gmail.com';
+    const emailUser = process.env.EMAIL_USER || 'gtcgarndtradingcompany@gmail.com';
     const emailPass = process.env.EMAIL_PASSWORD;
     console.log(`Using Email User: ${emailUser}`);
     console.log(`Email Password Set: ${emailPass ? 'YES (Length: ' + emailPass.length + ')' : 'NO'}`);
