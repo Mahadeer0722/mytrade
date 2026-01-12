@@ -16,6 +16,7 @@ export default function CheckoutPage() {
         message: ''
     });
     const [submitting, setSubmitting] = useState(false);
+    const [showQr, setShowQr] = useState(false);
 
     // Auto-fill message with cart items
     const generateOrderMessage = () => {
@@ -113,9 +114,22 @@ export default function CheckoutPage() {
                             <textarea name="message" value={formData.message} onChange={handleChange} rows={4} />
                         </div>
 
-                        <button type="submit" className="btn btn-primary" disabled={submitting}>
-                            {submitting ? 'Sending...' : 'Confirm & Send Order'}
-                        </button>
+                        <div className={styles.actions}>
+                            <button type="submit" className="btn btn-primary" disabled={submitting}>
+                                {submitting ? 'Sending...' : 'Confirm & Send Order'}
+                            </button>
+                            <button type="button" className={styles.qrBtn} onClick={() => setShowQr(true)}>
+                                Qr
+                            </button>
+                        </div>
+                        {showQr && (
+                            <div className={styles.modalOverlay} onClick={() => setShowQr(false)}>
+                                <div className={styles.modalContent} onClick={e => e.stopPropagation()}>
+                                    <button className={styles.closeBtn} onClick={() => setShowQr(false)}>×</button>
+                                    <img src="/images/qr-code.jpeg" alt="Payment QR Code" style={{ maxWidth: '100%', maxHeight: '80vh' }} />
+                                </div>
+                            </div>
+                        )}
                     </form>
                 </div>
             </div>
