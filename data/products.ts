@@ -29,7 +29,7 @@ export const products: Product[] = [
         image: '/images/vidya-insta-coffee.png',
         price: 150,
         options: [
-            { label: 'Instant Coffee - 200g', price: 150 },
+            { label: 'Instant Coffee - 200g', price: 180 },
             { label: 'Instant Coffee - 50g (Jar)', price: 100 },
             { label: 'Filter Coffee - 250g', price: 140 }
         ]
